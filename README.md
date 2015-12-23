@@ -13,5 +13,5 @@ Anyone who wants to help expand the spatial index is welcome.  Some areas of wor
  - Set up a better test suite
  - Add a "nearest" method
  
- Dependencies:
-  - Cython if you want to modify the .pyx file and recompile
+Dependencies:
+ - Cython if you want to modify the .pyx file and recompile
