@@ -254,7 +254,7 @@ class SpIndex4p(SpIndex4):
 
 class SpIndex4e(SpIndex4):
     '''Uses SpIndex4 superclass and implements an envelope (line, polygon) specific index'''
-    def __cinit__(self,tuple bounds = (0,0,10000,10000)):
+    def __init__(self,tuple bounds = (0,0,10000,10000)):
         SpIndex4.__cinit__(self,bounds)
         self._index = self._divide(self.bounds)
     def _divide(self, tuple envelope):

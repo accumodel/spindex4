@@ -61,69 +61,69 @@ def main():
     # print test_spindex4._index
     #
     #
-    # # test 1 for QUAD envelopes
-    # print '\n\n testing quad for envelopes'
-    # test_spindex4e = SpIndex4e((25,25,75,75))
-    # # lines = {'ln1':((1,1),(3,4)),
-    # #          'ln2':((80,2),(4,10)),
-    # #          'ln3':((20,10),(10,90),(90,8),(90,90)),
-    # #          'ln4':((30,30),(40,40))}
-    #
-    # lines = {'ln1':((11.48,11.83),(30.72,12.18)),
-    #         'ln2':((11.47,11.83),(11.48,54.71)),
-    #         'ln3':((11.48,54.71),(60.39,54.71)),
-    #         'ln4':((30.72,12.18),(30.72,38.83)),
-    #         'ln5':((60.22,11.12),(30.72,12.18)),
-    #         'ln6':((30.72,38.83),(60.22,38.83)),
-    #         'ln7':((89.35,11.12),(60.22,11.12)),
-    #         'ln8':((60.22,38.83),(60.22,11.12)),
-    #         'ln9':((89.53,38.83),(89.35,11.12)),
-    #         'ln10':((60.22,38.83),(89.53,38.83)),
-    #         'ln11':((60.39,54.71),(60.22,38.83)),
-    #         'ln12':((69.37,54.83),(89.53,38.83)),
-    #         'ln13':((69.37,54.83),(60.39,54.83)),
-    #         'ln14':((60.39,54.71),(60.46,60.85)),
-    #         'ln15':((69.37,60.85),(69.37,54.83)),
-    #         'ln16':((69.37,60.85),(78.83,60.85)),
-    #         'ln17':((78.83,60.85),(78.48,67.85)),
-    #         'ln18':((78.48,67.85),(69.41,67.85)),
-    #         'ln19':((60.46,60.85),(69.37,60.85)),
-    #         'ln20':((69.41,67.91),(69.37,60.85)),
-    #         'ln21':((60.46,60.85),(60.46,67.91)),
-    #         'ln23':((60.46,67.91),(69.41,67.91)),
-    #         'ln24':((60.46,67.91),(60.46,74.97)),
-    #         'ln25':((69.36,75.31),(69.41,67.91)),
-    #         'ln26':((60.46,74.97),(69.36,75.31))}
-    #
-    # for line in lines:
-    #    minx = 99999999
-    #    miny = 99999999
-    #    maxx = -99999999
-    #    maxy = -99999999
-    #    for vertex in lines[line]:
-    #        minx = min(minx,vertex[0])
-    #        miny = min(miny,vertex[1])
-    #        maxx = max(maxx,vertex[0])
-    #        maxy = max(maxy,vertex[1])
-    #    env = (minx,miny,maxx,maxy)
-    #    test_spindex4e.insert(env,line)
-    #
-    # print '\n\n'
-    # for cell in test_spindex4e._index:
-    #    print cell
-    #
-    # print '\n\n'
-    # for item in test_spindex4e.walk():
-    #    print '*' * item[1], item[0]
-    #
-    # print '\n\n'
-    # #    for item in set(test_spindex4e.intersect((20,30,40,42))):
-    # #    for item in set(test_spindex4e.intersect((55,70,75,94))):
-    # #    for item in set(test_spindex4e.intersect((10,60,30,80))):
-    # #    for item in set(test_spindex4e.intersect((45,35,70,60))):
-    # for item in set(test_spindex4e.intersect((45,35,70,60))):
-    #    print 'intersected item ', item
-    # test_spindex4e.visualize()
+    # test 1 for QUAD envelopes
+    print '\n\n testing quad for envelopes'
+    test_spindex4e = SpIndex4e((25,25,75,75))
+    # lines = {'ln1':((1,1),(3,4)),
+    #          'ln2':((80,2),(4,10)),
+    #          'ln3':((20,10),(10,90),(90,8),(90,90)),
+    #          'ln4':((30,30),(40,40))}
+
+    lines = {'ln1':((11.48,11.83),(30.72,12.18)),
+            'ln2':((11.47,11.83),(11.48,54.71)),
+            'ln3':((11.48,54.71),(60.39,54.71)),
+            'ln4':((30.72,12.18),(30.72,38.83)),
+            'ln5':((60.22,11.12),(30.72,12.18)),
+            'ln6':((30.72,38.83),(60.22,38.83)),
+            'ln7':((89.35,11.12),(60.22,11.12)),
+            'ln8':((60.22,38.83),(60.22,11.12)),
+            'ln9':((89.53,38.83),(89.35,11.12)),
+            'ln10':((60.22,38.83),(89.53,38.83)),
+            'ln11':((60.39,54.71),(60.22,38.83)),
+            'ln12':((69.37,54.83),(89.53,38.83)),
+            'ln13':((69.37,54.83),(60.39,54.83)),
+            'ln14':((60.39,54.71),(60.46,60.85)),
+            'ln15':((69.37,60.85),(69.37,54.83)),
+            'ln16':((69.37,60.85),(78.83,60.85)),
+            'ln17':((78.83,60.85),(78.48,67.85)),
+            'ln18':((78.48,67.85),(69.41,67.85)),
+            'ln19':((60.46,60.85),(69.37,60.85)),
+            'ln20':((69.41,67.91),(69.37,60.85)),
+            'ln21':((60.46,60.85),(60.46,67.91)),
+            'ln23':((60.46,67.91),(69.41,67.91)),
+            'ln24':((60.46,67.91),(60.46,74.97)),
+            'ln25':((69.36,75.31),(69.41,67.91)),
+            'ln26':((60.46,74.97),(69.36,75.31))}
+
+    for line in lines:
+       minx = 99999999
+       miny = 99999999
+       maxx = -99999999
+       maxy = -99999999
+       for vertex in lines[line]:
+           minx = min(minx,vertex[0])
+           miny = min(miny,vertex[1])
+           maxx = max(maxx,vertex[0])
+           maxy = max(maxy,vertex[1])
+       env = (minx,miny,maxx,maxy)
+       test_spindex4e.insert(env,line)
+
+    print '\n\n'
+    for cell in test_spindex4e._index:
+       print cell
+
+    print '\n\n'
+    for item in test_spindex4e.walk():
+       print '*' * item[1], item[0]
+
+    print '\n\n'
+    #    for item in set(test_spindex4e.intersect((20,30,40,42))):
+    #    for item in set(test_spindex4e.intersect((55,70,75,94))):
+    #    for item in set(test_spindex4e.intersect((10,60,30,80))):
+    #    for item in set(test_spindex4e.intersect((45,35,70,60))):
+    for item in set(test_spindex4e.intersect((45,35,70,60))):
+       print 'intersected item ', item
+    test_spindex4e.visualize()
     #
     #
     #  TEST 2 FOR QUAD
